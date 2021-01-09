@@ -3,7 +3,7 @@
 include("auth_session.php");
 ?>
 <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
-    <title>Bootstrap 4 Blog Template For Developers</title>
+    <title>Query Spot</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -78,7 +78,8 @@ include("auth_session.php");
     <div class="main-wrapper">
 	    <section class="cta-section theme-bg-light py-5">
 		    <div class="container text-center">
-			    <h2 class="heading">Codegram</h2>
+		    	<img src = "website_logo.png"></img>
+			   <!-- <h2 class="heading">QuerySpot</h2>-->
 			    <div class="intro">The place where all your doubts get answered!</div>
 			    <form class="signup-form form-inline justify-content-center pt-3">
                     <div class="form-group">
@@ -245,8 +246,9 @@ mysqli_close($con);
 		}
     .vertical-center {
       margin: 0;
-      position: absolute;
-      top: 250%;
+      position: relative;
+      margin-top: 50px;
+      display: block;
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
 	 }
