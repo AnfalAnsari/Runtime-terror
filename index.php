@@ -84,7 +84,7 @@ include("auth_session.php");
 			    <form class="signup-form form-inline justify-content-center pt-3">
                     <div class="form-group">
                         <label class="sr-only" for="semail">Your email</label>
-                        <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter Question">
+                        <input type="text" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter Question">
                     </div>
                     <button type="submit" class="btn btn-primary">Search</button>
                 </form>
@@ -187,12 +187,7 @@ mysqli_close($con);
 		    </div>
 	    </section>
 	    
-	    <footer class="footer text-center py-1 theme-bg-dark">
-		   
-	        
-                <!-- <small class="copyright">Designed with <svg class="svg-inline--fa fa-heart fa-w-16" style="color: #fb866a;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg><i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small> -->
-		   
-	    </footer>
+	   <hr width="80%">
     
     </div><!--//main-wrapper-->
     
@@ -233,7 +228,9 @@ mysqli_close($con);
 			padding-left: 5px;
 			margin-right: 15px;
 			border-style: double;
-			border-radius: 2;
+			border-radius: 5px;
+			border-color: green;
+
 		}
     #tarea1{
       font: bold;
@@ -245,46 +242,59 @@ mysqli_close($con);
 			color: rgb(4, 3, 90);
 		}
     .vertical-center {
-      margin: 0;
+      margin-right: -10%;
+
       position: relative;
       margin-top: 50px;
       display: block;
+      float: right;
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
 	 }
 	 .tags
 	 {
 	 	 align: center;
-		 left: 200%;
+		 left: 100%;
+		 
+
+		 
 	 }
 	</style>
 
 		<!-- To fill the question form  -->
-	<h3 class="signup-form form-inline justify-content-center pt-3">
+	<h3 class="signup-form form-inline justify-content-center pt-3" style="margin-left: 20%">
 		Post your own question!
 	</h3>
 		<form action="submit.php" method = "Post">
-    <div id="form-rt1" class="signup-form form-inline justify-content-center pt-3"><div class="font_1">Enter Title : </div> <br> 
-	<textarea id="tarea1" class="signup-form form-inline justify-content-center pt-3" cols="
-  		100" rows="2" name="title""></textarea></div>
-		<div id="form-rt" class="signup-form form-inline justify-content-center pt-3"><div class="font_1">Enter Your Question: </div> <br>   
-		<textarea id="tarea" class="signup-form form-inline justify-content-center pt-3" cols="
-		100" rows="2" name ="description"></textarea>
-    <div style=""class="font_1">
+   <div id="form-rt1" class="signup-form form-inline justify-content-center pt-3">
+      <div class="font_1">Enter Title : </div>
+      <br> 
+      <textarea id="tarea1" class="signup-form form-inline justify-content-center pt-3" cols="
+         100" rows="1" name="title"></textarea>
+   </div>
+   <div id="form-rt" class="signup-form form-inline justify-content-center pt-3">
+      <div class="font_1">Description: </div>
+      <br>   
+      <textarea id="tarea" class="signup-form form-inline justify-content-center pt-3" cols="
+         100" rows="3" name ="description"></textarea></div>
+      <div style="float: right; margin-right: 35%; margin-bottom: 200px; clear: both;" class="font_1">
+         <br>
+         Add tags :
+        
+         <select class="tags" name="tags" >
+            <option value="fron-end">front-end</option>
+            <option value="back-end">back-end</option>
+            <option value="competitive">competitive</option>
+            <option value="android">android</option>
+            <option value="ML/DL">ML/DL</option>
+            <option value="game dev">game dev</option>
+         </select>
+         
+      </div>
       <br>
-      Add tags :
-      <select class="tags" name="tags" >
-        <option value="fron-end">front-end</option>
-        <option value="back-end">back-end</option>
-        <option value="competitive">competitive</option>
-        <option value="android">android</option>
-        <option value="ML/DL">ML/DL</option>
-        <option value="game dev">game dev</option>
-      </select><br>
-    </div>
-    <br>
-		<button type="submit" class="btn btn-primary vertical-center" name="submit">Submit</button></div>
-	</form>
+    <div><br> <button type="submit" class="btn btn-primary vertical-center" name="submit">Submit</button> </div>
+   
+</form>
        
     <!-- Javascript -->          
     <script src="assets/plugins/jquery-3.3.1.min.js"></script>
